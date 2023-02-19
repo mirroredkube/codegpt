@@ -80,7 +80,7 @@ const handleSubmit = async (e) => {
 
   // Fetch data from server using OpenAI api
 
-  const response = await fetch('https://codegpt-0tjx.onrender.com', {
+  const response = await fetch('https://codegpt-0tjx.onrender.com/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
