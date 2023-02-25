@@ -7,6 +7,7 @@ dotenv.config();
 dotenv.config({ path: `.env.local`, override: true });
 
 const configuration = new Configuration({
+    organization: "org-zPA5wpcvsZ77uq8mPDK4ycFj",
     apiKey: process.env.OPENAI_API_KEY, 
 });
 
