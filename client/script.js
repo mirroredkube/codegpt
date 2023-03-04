@@ -1,6 +1,11 @@
 import bot from './assets/bot.svg';
 import user from './assets/user.svg';
 
+import {viteAPIUrl} from './vite.config';
+
+dotenv.config();
+dotenv.config({ path: `.env.local`, override: true });
+
 const form = document.querySelector('form');
 const chatContainer = document.querySelector('#chat_container');
 
@@ -80,7 +85,7 @@ const handleSubmit = async (e) => {
 
   // Fetch data from server using OpenAI api
 
-  const response = await fetch('https://codegpt-0tjx.onrender.com/', {
+  const response = await fetch(`${viteAPIUrl}` , {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
