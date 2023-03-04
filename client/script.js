@@ -1,7 +1,6 @@
 import bot from './assets/bot.svg';
 import user from './assets/user.svg';
-
-import {viteAPIUrl} from './vite.config';
+import * as dotenv from 'dotenv';
 
 dotenv.config();
 dotenv.config({ path: `.env.local`, override: true });
@@ -85,7 +84,7 @@ const handleSubmit = async (e) => {
 
   // Fetch data from server using OpenAI api
 
-  const response = await fetch(`${viteAPIUrl}` , {
+  const response = await fetch(process.env.VITE_API_URL , {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

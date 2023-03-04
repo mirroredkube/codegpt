@@ -50,5 +50,5 @@ app.post('/', async(req, res) => {
 })
 
 app.listen(5000, () => {
-    console.log('Server is running and listening to http://localhost:5000.')
+    console.log('Server is running and listening to `${process.env.API_URL}`')
 })
