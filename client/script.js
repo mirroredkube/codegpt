@@ -28,7 +28,7 @@ function typeText(element, text) {
     } else {
       clearInterval(typeInterval);
     }
-  }, 20)
+  }, 40)
 }
 
 function generateUniqueId() {
